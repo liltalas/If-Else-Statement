@@ -18,21 +18,25 @@ public class NumberIdentifier {
          */
 
         Scanner scanner;
-        int number = 0;
         String value = "";
 
         //TODO implement your code here...
 
         scanner = new Scanner(System.in);
+        System.out.println("Enter a number: ");
+        int number = scanner.nextInt();
 
+        if(number >= 0){
+            if(number == 0){
+                value = "zero";
+            } else{
+                value = "positive";
+            }
+        }  else{
+            value = "negative";
+        }
 
-
-
-
-
-
-
-
+        System.out.println(value);
 
 
         /*ignore this...*/
@@ -81,5 +85,5 @@ public class NumberIdentifier {
         //ignore this...
         Validation.testGreatestNumber(num1, num2, num3, greatestNum);
 
-    }
+   }
 }
