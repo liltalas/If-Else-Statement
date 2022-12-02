@@ -70,13 +70,32 @@ public class NumberIdentifier {
          */
 
 
-        int num1 = 0;
-        int num2 = 0;
-        int num3 = 0;
         String greatestNum = "";
 
 
         //TODO implement your code here...
+        System.out.println("Enter first number: ");
+        int num1 = scanner.nextInt();
+        System.out.println("Enter second number: ");
+        int num2 = scanner.nextInt();
+        System.out.println("Enter third number: ");
+        int num3 = scanner.nextInt();
+
+        if(num1 > num2 && num2 > num3){
+            greatestNum = "1";
+        } else if(num2 > num3 && num1 < num2){
+            greatestNum = "2";
+        } else if(num3 > num1 && num3 > num2){
+            greatestNum = "3";
+        } else if(num1 == num2){
+            greatestNum = "1 & 2";
+        }  else if(num2 == num3){
+            greatestNum = "2 & 3";
+        }  else if(num1 == num3){
+            greatestNum = "1 & 3";
+        } else {
+            greatestNum = "1 & 2 & 3";
+        }
 
 
         System.out.println("The greatest number: " + greatestNum);
