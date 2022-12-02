@@ -18,11 +18,18 @@ public class Voter {
          * Eligible to vote: false
          */
         Scanner scanner;
-        int age = 0;
-        boolean isEligible = false;
+        boolean isEligible;
 
         //TODO implement your code here...
         scanner = new Scanner(System.in);
+        System.out.println("Enter your age: ");
+        int age = scanner.nextInt();
+
+        if(age >= 18){
+            isEligible = true;
+        } else {
+            isEligible = false;
+        }
 
 
         System.out.println("Eligible to vote: " + isEligible);
