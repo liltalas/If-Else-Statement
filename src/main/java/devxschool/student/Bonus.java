@@ -19,14 +19,26 @@ public class Bonus {
          * 3
          * Your bonus is 3000.0
          */
-        Scanner scanner;
+        Scanner sc = new Scanner(System.in);
 
-        int salary = 0;
-        int yearOfService = 0;
-        double bonus = 0;
+//        int salary = 0;
+//        int yearOfService = 0;
+//        double bonus = 0;
 
         //TODO implement your code here...
+        System.out.println("Please enter your salary: ");
+        int salary = sc.nextInt();
+        System.out.println("Enter years of service: ");
+        int yearOfService = sc.nextInt();
+        double bonus = 0;
 
+        if(yearOfService >= 3 && yearOfService < 5){
+            bonus = (salary * 3) / 100;
+        } else if(yearOfService >= 5){
+            bonus = (salary * 5) / 100;
+        } else{
+            System.out.println("Sorry, you are unqualified for the bonus :/ ");
+        }
 
         System.out.println("Your bonus is " + bonus);
 
