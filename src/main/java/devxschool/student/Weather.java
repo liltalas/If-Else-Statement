@@ -36,13 +36,26 @@ public class Weather {
 
 
         Scanner scanner;
-        String weather = "";
-        double temperature = 32;
         String thingsToTake = "";
 
 
         //TODO implement your code here...
         scanner = new Scanner(System.in);
+        System.out.println("Enter weather outside(rainy, snowy, sunny):\n");
+        String weather = scanner.nextLine(); // input a string value
+
+        System.out.println("Enter temperature outside:\n");
+        double temperature = scanner.nextDouble();
+
+        if((weather.equals("snowy") || weather.equals("rainy")) && temperature >= 50){
+            thingsToTake = "umbrella";
+        } else if(weather.equals("sunny") && temperature >=50){
+            thingsToTake = "sunglasses";
+        } else if((weather.equals("snowy")|| (weather.equals("rainy"))) && temperature < 50){
+            thingsToTake = "umbrella and coat";
+        } else if(weather.equals("sunny") && temperature < 50){
+            thingsToTake = "coat";
+        }
 
 
         System.out.println("Please take " + thingsToTake + ", thanks!");
